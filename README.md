@@ -28,7 +28,7 @@ data
 
 
 **remember to create a folder named "out"**
-##train
+## train
 >python main.py --dataset mnist --input_height=28 --output_height=28 --train
 
 >python main.py --dataset celebA --input_height=108 --train --crop
