@@ -33,7 +33,7 @@ then you need to create a folder like this
 
 >python main.py --dataset celebA --input_height=108 --train --crop
 
-*(on ubuntu i use)*
+*in ubuntu i use*
 >nohup python main.py --dataset mnist --input_height=28 --output_height=28 --train &
 
 >CUDA_VISIBLE_DEVICES=1 nohup python main.py --dataset celebA --input_height=108 --train --crop > myout.file 2>&1 &
