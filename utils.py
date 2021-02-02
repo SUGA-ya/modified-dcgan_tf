@@ -16,7 +16,7 @@ from time import gmtime, strftime
 from six.moves import xrange
 from PIL import Image
 import imageio
-import moviepy.editor as mpy
+#import moviepy.editor as mpy
 
 import tensorflow as tf
 
