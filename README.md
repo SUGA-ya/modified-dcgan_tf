@@ -19,12 +19,12 @@ dataset "mnist" on http://yann.lecun.com/exdb/mnist/ ,including four files, trai
 then you need to create a folder like this 
 
 data
---celeba
---mnist
-----train-images-idx3-ubyte
-----train-labels-idx1-ubyte
-----t10k-images-idx3-ubyte
-----t10k-labels-idx1-ubyte
+- celeba
+- mnist
+  - train-images-idx3-ubyte
+  - train-labels-idx1-ubyte
+  - t10k-images-idx3-ubyte
+  - t10k-labels-idx1-ubyte
 
 
 **remember to create a folder named "out"**
