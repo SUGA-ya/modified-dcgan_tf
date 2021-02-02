@@ -187,7 +187,7 @@ class DCGAN(object):
         [self.z_sum, self.d_sum, self.d_loss_real_sum, self.d_loss_sum])
     self.writer = SummaryWriter(os.path.join(self.out_dir, "logs"), self.sess.graph)
 
-    sample_z = gen_random(config.z_dist, size=(self.sample_num , self.z_dim))
+    sample_z = gen_random(config.z_dist, size=(self.sample_num , self.z_dim))#在训练时不变，所以训练时生成的图像是渐变的
 
     
     if config.dataset == 'mnist':
@@ -315,7 +315,7 @@ class DCGAN(object):
               feed_dict={
                   self.z: sample_z,
                   self.inputs: sample_inputs,
-                  self.y:sample_labels,
+                  self.y:sample_labels,#参与sampler的y保持不变，所以调整z的维度，最后生成的图像的标签还是不变的
               }
             )
             save_images(samples, image_manifold_size(samples.shape[0]),
